@@ -1,6 +1,6 @@
 const Birds = () => {
     return(
-        <h1>about is here</h1>
+        <h1>birds is here</h1>
     )
 }
 export default Birds;

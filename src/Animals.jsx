@@ -1,6 +1,6 @@
 const Animals = () => {
     return(
-        <h1>about is here</h1>
+        <h1>animals is here</h1>
     )
 }
 export default Animals;
