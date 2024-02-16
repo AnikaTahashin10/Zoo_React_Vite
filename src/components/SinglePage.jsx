@@ -1,11 +1,13 @@
+// SinglePage.jsx
 import React from 'react';
-import PropTypes from 'prop-types'; 
-import { useParams } from 'react-router-dom';
 
-const SinglePage = ({ data }) => {
-  const { itemId } = useParams();
-
+const SinglePage = ({ data, match }) => {
+  const { itemId } = match.params;
   const item = data.find(item => item.id === itemId);
+
+  if (!item) {
+    return <div>Item not found</div>;
+  }
 
   return (
     <div>
@@ -13,10 +15,6 @@ const SinglePage = ({ data }) => {
       <p>{item.description}</p>
     </div>
   );
-};
-
-SinglePage.propTypes = {
-  data: PropTypes.array.isRequired, 
 };
 
 export default SinglePage;

@@ -25,8 +25,7 @@ const Animals = () => {
 
   return (
     <div>
-      <h1>Animals Page</h1>
-      <Link to="/">Home</Link>
+      <h1 style={{textAlign: "center"}}>Animals Page</h1>
       <Search onSearch={handleSearch} value={searchQuery} />
       <div className="card-container">
         {filteredAnimals.map((animal, index) => (

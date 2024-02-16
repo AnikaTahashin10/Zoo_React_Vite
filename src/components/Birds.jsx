@@ -23,8 +23,7 @@ const Birds = () => {
 
   return (
     <div>
-      <h1>Birds Page</h1>
-      <Link to="/">Home</Link>
+      <h1 style={{textAlign: "center"}}>Birds Page</h1>
       <Search onSearch={handleSearch} value={searchQuery} />
       <div className="card-container">
         {filteredBirds.map((bird, index) => (
