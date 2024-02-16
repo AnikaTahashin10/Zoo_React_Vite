@@ -8,7 +8,6 @@ import birdsData from "./data/birdsData";
 import ErrorPage from "./routes/ErrorPage";
 import Animals from "./components/Animals";
 import Birds from "./components/Birds";
-import Card from "./components/Card";
 
 const App = () => {
   return (
@@ -19,8 +18,8 @@ const App = () => {
         <Route path="/animals" element={<Animals title="Animals" data={animalsData} basePath="/animals" />} />
         <Route path="/birds" element={<Birds title="Birds" data={birdsData} basePath="/birds" />} />
         <Route path="*" element={<ErrorPage />} />
+
       </Routes>
-      
       </>
   );
 };

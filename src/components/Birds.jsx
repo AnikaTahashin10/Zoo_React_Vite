@@ -1,31 +1,36 @@
-// Birds.jsx
 import React, { useState } from 'react';
 import birdsData from '../data/birdsData';
 import Search from './Search';
 import { Link } from 'react-router-dom';
-// import Card from './Card';
+import Card from './Card';
 
 const Birds = () => {
   const [filteredBirds, setFilteredBirds] = useState(birdsData);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (query) => {
-    const filtered = birdsData.filter(bird =>
+    setSearchQuery(query);
+    filterBirds(query);
+  };
+
+  const filterBirds = (query) => {
+    const filtered = birdsData.filter((bird) =>
       bird.name.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredBirds(filtered);
   };
 
+
   return (
     <div>
       <h1>Birds Page</h1>
       <Link to="/">Home</Link>
-      {/* <Card></Card> */}
-      <Search onSearch={handleSearch} />
-      <ul>
+      <Search onSearch={handleSearch} value={searchQuery} />
+      <div className="card-container">
         {filteredBirds.map((bird, index) => (
-          <li key={index}>{bird.name}</li>
+          <Card key={index} name={bird.name} close={() => alert('Close clicked!')} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
