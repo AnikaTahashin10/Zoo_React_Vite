@@ -1,42 +1,28 @@
-//import {useState} from 'react'
-import Footer from './Footer';
-import Header from './Header';
-import { Routes, Route } from "react-router-dom";
-import Home from './Home';
-import Animals from './Animals';
-import Birds from './Birds';
-import About from './About';
-import Card from './Card';
-import dogs from './assets/dogs.jpeg'
-import fox from './assets/fox.avif'
-import './App.css'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+//import CategoryPage from "./routes/Category";
+import About from "./routes/About";
+import animalsData from "./data/animalsData";
+import birdsData from "./data/birdsData";
+import ErrorPage from "./routes/ErrorPage";
+import Animals from "./components/Animals";
+import Birds from "./components/Birds";
+import Card from "./components/Card";
 
-function App() {
-
-// const [animals, setAnimal] = useState([
-//   {id: 1, image: {dogs}},
-//   {id: 2, image: {fox}},
-// ])
-
+const App = () => {
   return (
-    <div className='App'>
-    <Header/>
-    
-    <Routes>
-    <Route path= "/home" element = {<Home/>} />
-      <Route path= "/about" element = {<About/>} />
-      <Route path= "/animals" element = {<Animals/>} />
-      <Route path= "/birds" element = {<Birds/>} />
-
-    </Routes>
-    <h1>Animals of the Zoo</h1>
-    <Card />
-            <Footer/>
-            </div>
-
-  )
-}
-
-
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/animals" element={<Animals title="Animals" data={animalsData} basePath="/animals" />} />
+        <Route path="/birds" element={<Birds title="Birds" data={birdsData} basePath="/birds" />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      
+      </>
+  );
+};
 
 export default App;
