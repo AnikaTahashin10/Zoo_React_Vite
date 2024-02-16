@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-//import CategoryPage from "./routes/Category";
 import About from "./routes/About";
 import animalsData from "./data/animalsData";
 import birdsData from "./data/birdsData";

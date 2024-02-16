@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import birdsData from '../data/birdsData';
 import Search from './Search';
-import { Link } from 'react-router-dom';
 import Card from './Card';
 
 const Birds = () => {

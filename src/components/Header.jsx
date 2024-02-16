@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -67,9 +65,9 @@ const styles = {
     transition: 'color 0.3s',
   },
   hover: {
-    color: 'black', // light blue with full opacity
-    textShadow: "black", // light blue shadow with 50% opacity
-    transform: 'scale(1.1)', // increase size by 10%
+    color: 'black', 
+    textShadow: "black", 
+    transform: 'scale(1.1)', 
   },
 };
 

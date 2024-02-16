@@ -1,8 +1,6 @@
-// Animals.jsx
 import React, { useState } from 'react';
 import animalsData from '../data/animalsData';
 import Search from './Search';
-import { Link } from 'react-router-dom';
 import Card from './Card';
 
 const Animals = () => {

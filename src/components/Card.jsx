@@ -48,8 +48,8 @@ const styles = {
     maxWidth: "300px",
     textAlign: "center",
     margin: "8px",
-    display: "inline-block", // Displays cards inline
-    verticalAlign: "top", // this align cards to the top row
+    display: "inline-block", 
+    verticalAlign: "top", 
   },
   image: {
     width: "100%",
